@@ -40,6 +40,6 @@
 
 FactoryGirl.define do
   factory :account do
-    
+    email { FFaker::Internet.email }
   end
 end

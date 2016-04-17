@@ -16,5 +16,10 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  before { @model = FactoryGirl.build(:category) }
+  subject { @model }
+
+  it { is_expected.to respond_to(:name) }
+
 end
