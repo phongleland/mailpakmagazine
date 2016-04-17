@@ -20,6 +20,6 @@ RSpec.describe Category, type: :model do
   before { @model = FactoryGirl.build(:category) }
   subject { @model }
 
-  it { is_expected.to respond_to(:name) }
+  it_behaves_like "an object with attributes", [ :name, :permalink ]
 
 end

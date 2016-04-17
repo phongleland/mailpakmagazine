@@ -45,6 +45,7 @@ RSpec.describe Account, type: :model do
   before { @model = FactoryGirl.build(:account) }
   subject { @model }
 
-  it { is_expected.to respond_to(:email) }
+  it_behaves_like "an object with attributes", [ :email ]
+
 
 end
